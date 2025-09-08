@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home - Crochet</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="nav.css">
+<style>
+  /* NAVBAR STYLING */
+  
+
+  /* HERO SECTION */
+  .hero {
+    text-align: center;
+    margin-top: 100px; /* Space below navbar */
+    font-family: 'Poppins', sans-serif;
+    padding: 0 20px;
+    color: red; /* make hero text red */
+  }
+
+  .hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .hero h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+  }
+
+  .hero ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero ul li a {
+    text-decoration: none;
+    color: red; /* links red */
+    font-weight: bold;
+    border: 1px solid red;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .hero ul li a:hover {
+    background-color: red;
+    color: white;
+  }
+
+  /* GALLERY GRID */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    color: red; /* gallery captions or text red */
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html">Welcome</a>
+  <a href="about.html">About</a>
+  <a href="home.html">Home</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="tutorials.html">Tutorials</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="faqs.html">FAQs</a>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1 style="color: red;">Welcome to Our Crochet World</h1>
+  <p style="color: red;">Discover the art and love woven into every handmade creation. Explore our cozy collection, get inspired, or learn to crochet yourself!</p>
+  
+</section>
+
+<!-- GALLERY GRID -->
+<section class="gallery">
+  <img src="images/crochet hooks.webp" alt="Crochet Item 1">
+  <img src="images/On going process.png" alt="Crochet Item 2">
+</section>
+
+</body>
+</html>
+
+
