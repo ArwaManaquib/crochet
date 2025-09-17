@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --font-noto: 'Noto Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-plus-jakarta), var(--font-noto), sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
