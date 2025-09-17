@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { GRADIENTS } from "@/lib/colors";
 
 const Logo = () => (
   <svg
@@ -29,9 +30,9 @@ const Header = () => {
 
   const navItems = [
     { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
     { href: "/gallery", label: "Gallery & Tutorials" },
     { href: "/blog", label: "Blogs & Stories" },
-    { href: "/about", label: "About" },
   ];
 
   return (
@@ -39,7 +40,7 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky top-0 z-50 bg-primary-50/95 backdrop-blur-sm border-b border-warm-100/50 px-4 sm:px-6 lg:px-10 py-4"
+      className={`sticky top-0 z-50 ${GRADIENTS.layout.header} backdrop-blur-sm border-b border-warm-100/50 px-4 sm:px-6 lg:px-10 py-4`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
@@ -54,7 +55,7 @@ const Header = () => {
           >
             <Logo />
           </motion.div>
-          <h2 className="text-lg font-bold leading-tight tracking-tight group-hover:text-primary-200 transition-colors duration-300">
+          <h2 className="text-lg font-bold leading-tight tracking-tight  transition-colors duration-300">
             Knot2Heart
           </h2>
         </Link>
@@ -70,10 +71,10 @@ const Header = () => {
             >
               <Link
                 href={item.href}
-                className="text-primary-400 text-sm font-medium leading-normal hover:text-primary-200 transition-colors duration-300 relative group"
+                className="text-primary-400 text-sm font-medium leading-normal transition-colors duration-300 relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-200 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </motion.div>
           ))}

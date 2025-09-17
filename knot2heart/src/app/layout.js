@@ -1,16 +1,16 @@
-import { Plus_Jakarta_Sans, Noto_Sans } from "next/font/google";
 import "./globals.css";
+import { Plus_Jakarta_Sans, Noto_Sans } from "next/font/google";
 import Layout from "@/components/layout/Layout";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-family-jakarta",
   weight: ["400", "500", "700", "800"],
 });
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
-  variable: "--font-noto",
+  variable: "--font-family-noto",
   weight: ["400", "500", "700", "900"],
 });
 

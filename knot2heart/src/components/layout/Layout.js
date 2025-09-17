@@ -3,10 +3,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
+import { GRADIENTS } from "@/lib/colors";
 
 const Layout = ({ children }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-warm-50/30 via-primary-50 to-white flex flex-col">
+    <div className={`min-h-screen ${GRADIENTS.layout.main} flex flex-col`}>
       <Header />
 
       <AnimatePresence mode="wait">

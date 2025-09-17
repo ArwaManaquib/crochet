@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import Newsletter from "@/components/ui/Newsletter";
+
+import { GRADIENTS } from "@/lib/colors";
 
 export default function Home() {
   const featuredCategories = [
@@ -60,7 +61,7 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-warm-200/10 via-black/20 to-black/40" />
+          <div className={`absolute inset-0 ${GRADIENTS.sections.hero}`} />
         </div>
 
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
@@ -93,7 +94,9 @@ export default function Home() {
       </section>
 
       {/* Featured Categories */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-warm-50/30 to-primary-50">
+      <section
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${GRADIENTS.sections.featured}`}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -127,7 +130,9 @@ export default function Home() {
       </section>
 
       {/* Highlighted Creations */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-sage-50/30 to-white">
+      <section
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${GRADIENTS.sections.highlighted}`}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -162,7 +167,9 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-lavender-50/20 to-warm-50/20">
+      <section
+        className={`py-16 px-4 sm:px-6 lg:px-8 ${GRADIENTS.sections.about}`}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -209,9 +216,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Newsletter Section */}
-      <Newsletter />
     </div>
   );
 }

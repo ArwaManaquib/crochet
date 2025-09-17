@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Button from "./Button";
+import { GRADIENTS, COLORS } from "@/lib/colors";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
@@ -30,7 +31,7 @@ const Newsletter = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="py-16 px-4 sm:px-6 lg:px-10 bg-gradient-to-r from-warm-50/40 to-sage-50/40"
+      className={`py-16 px-4 sm:px-6 lg:px-10 ${GRADIENTS.components.newsletter}`}
     >
       <div className="max-w-2xl mx-auto text-center">
         <motion.div
@@ -40,10 +41,10 @@ const Newsletter = () => {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <h2 className="text-primary-400 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-4">
+          <h2 className="text-primary-700 text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-4">
             Join our crochet circle 💛
           </h2>
-          <p className="text-primary-400 text-base font-normal leading-normal max-w-lg mx-auto">
+          <p className="text-primary-600 text-base font-normal leading-normal max-w-lg mx-auto">
             Stay updated with the latest patterns, tutorials, and stories from
             Knot2Heart.
           </p>
@@ -65,7 +66,7 @@ const Newsletter = () => {
               placeholder="Your email address"
               required
               disabled={isSubmitting}
-              className="w-full px-4 py-3 bg-white border border-warm-100 rounded-lg text-primary-400 placeholder-primary-300 focus:outline-none focus:ring-2 focus:ring-warm-200 transition-all duration-300"
+              className={`w-full px-4 py-3 bg-white border ${COLORS.borders.warm[100]} rounded-lg text-primary-600 placeholder-primary-400 focus:outline-none focus:ring-2 ${COLORS.focus.warm[200]} transition-all duration-300`}
             />
           </div>
           <Button
@@ -90,7 +91,7 @@ const Newsletter = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="mt-4 p-3 bg-sage-50 text-sage-800 rounded-lg border border-sage-200"
+            className={`mt-4 p-3 ${COLORS.backgrounds.sage[50]} ${COLORS.text.sage[800]} rounded-lg border ${COLORS.borders.sage[200]}`}
           >
             Thank you for subscribing! 🎉
           </motion.div>

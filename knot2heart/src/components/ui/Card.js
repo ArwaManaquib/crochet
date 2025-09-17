@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { getCardClasses } from "@/lib/colors";
 
 const Card = ({
   title,
@@ -21,9 +22,8 @@ const Card = ({
 
   const cardContent = (
     <motion.div
-      whileHover={{ y: -4 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className={`group bg-gradient-to-br from-white to-warm-50/20 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden ${className}`}
+      className={getCardClasses(className)}
       {...props}
     >
       {image && (
@@ -44,12 +44,12 @@ const Card = ({
       {(title || description) && (
         <div className="p-4">
           {title && (
-            <h3 className="text-primary-400 text-base font-medium leading-normal mb-2 group-hover:text-primary-200 transition-colors duration-300">
+            <h3 className="text-primary-700 text-base font-medium leading-normal mb-2  transition-colors duration-300">
               {title}
             </h3>
           )}
           {description && (
-            <p className="text-primary-300 text-sm font-normal leading-normal">
+            <p className="text-primary-600 text-sm font-normal leading-normal">
               {description}
             </p>
           )}

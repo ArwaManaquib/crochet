@@ -1,18 +1,92 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --font-plus-jakarta: 'Plus Jakarta Sans', sans-serif;
-    --font-noto: 'Noto Sans', sans-serif;
-  }
+@theme {
+  /* Font families */
+  --font-family-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-family-noto: "Noto Sans", sans-serif;
 
-  body {
-    font-family: var(--font-plus-jakarta), var(--font-noto), sans-serif;
-  }
+  /* Primary colors - Deeper, warmer rose tones inspired by yarn colors */
+  --color-primary-50: #f7f1f1;
+  --color-primary-100: #ede0e0;
+  --color-primary-200: #dcc4c4;
+  --color-primary-300: #c49a9a;
+  --color-primary-400: #a66b6b;
+  --color-primary-500: #8b4a4a;
+  --color-primary-600: #733a3a;
+  --color-primary-700: #5e2f2f;
+  --color-primary-800: #4a2525;
+  --color-primary-900: #3d1f1f;
+
+  /* Accent colors - Rich coral like hand-dyed yarn */
+  --color-accent-100: #e8a5a7;
+  --color-accent-200: #e18a8c;
+  --color-accent-300: #d96e71;
+  --color-accent-400: #c85356;
+  --color-accent-500: #b23d40;
+
+  /* Warm colors - Rich terracotta and burnt orange like natural wool */
+  --color-warm-50: #faf6f2;
+  --color-warm-100: #f2e8dc;
+  --color-warm-200: #e6d0b8;
+  --color-warm-300: #d4b088;
+  --color-warm-400: #c08c56;
+  --color-warm-500: #a66d3a;
+  --color-warm-600: #8b5530;
+  --color-warm-700: #6f4428;
+  --color-warm-800: #5a3621;
+  --color-warm-900: #4a2d1c;
+
+  /* Sage colors - Deeper forest greens like natural plant dyes */
+  --color-sage-50: #f4f6f4;
+  --color-sage-100: #e6eae6;
+  --color-sage-200: #cdd5cd;
+  --color-sage-300: #a8b8a8;
+  --color-sage-400: #7f957f;
+  --color-sage-500: #5d7a5d;
+  --color-sage-600: #4a614a;
+  --color-sage-700: #3d4f3d;
+  --color-sage-800: #334133;
+  --color-sage-900: #2a352a;
+
+  /* Sunny colors - Muted golden yellows like natural cotton */
+  --color-sunny-50: #faf8f2;
+  --color-sunny-100: #f3ede0;
+  --color-sunny-200: #e8dcc0;
+  --color-sunny-300: #d9c394;
+  --color-sunny-400: #c7a666;
+  --color-sunny-500: #b08a42;
+  --color-sunny-600: #947235;
+  --color-sunny-700: #785c2c;
+  --color-sunny-800: #614925;
+  --color-sunny-900: #503d20;
+
+  /* Lavender colors */
+  --color-lavender-50: #faf7ff;
+  --color-lavender-100: #f3edff;
+  --color-lavender-200: #e9ddff;
+  --color-lavender-300: #d4c1ff;
+  --color-lavender-400: #b794ff;
+  --color-lavender-500: #9c69ff;
+  --color-lavender-600: #8b42ff;
+  --color-lavender-700: #7c2eff;
+  --color-lavender-800: #6b21e8;
+  --color-lavender-900: #5b1bb8;
+
+  /* Soft colors */
+  --color-soft-50: #fdf4ff;
+  --color-soft-100: #fae8ff;
+  --color-soft-200: #f5d0fe;
+  --color-soft-300: #f0abfc;
+  --color-soft-400: #e879f9;
+  --color-soft-500: #d946ef;
+  --color-soft-600: #c026d3;
+  --color-soft-700: #a21caf;
+  --color-soft-800: #86198f;
+  --color-soft-900: #701a75;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  body {
+    font-family: var(--font-family-jakarta), var(--font-family-noto), sans-serif;
   }
 }
