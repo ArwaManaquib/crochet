@@ -28,9 +28,15 @@ const Logo = () => (
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
+    { href: "/journey", label: "Journey" },
     { href: "/gallery", label: "Gallery & Tutorials" },
     { href: "/blog", label: "Blogs & Stories" },
   ];
@@ -82,9 +88,10 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
           className="md:hidden p-2 text-primary-400 hover:text-primary-200 transition-colors"
           aria-label="Toggle menu"
+          type="button"
         >
           <svg
             className="w-6 h-6"
@@ -117,7 +124,8 @@ const Header = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden mt-4 pt-4 border-t border-primary-100"
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="md:hidden mt-4 pt-4 border-t border-primary-100 overflow-hidden"
         >
           {navItems.map((item, index) => (
             <motion.div

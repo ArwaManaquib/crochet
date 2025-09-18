@@ -2,12 +2,14 @@
 
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
+import Link from "next/link";
 import { getButtonClasses } from "@/lib/colors";
 
 const Button = forwardRef(
   (
     {
       children,
+      href,
       variant = "primary",
       size = "md",
       className = "",
@@ -19,6 +21,18 @@ const Button = forwardRef(
   ) => {
     const classes = `${getButtonClasses(variant, size)} ${className}`;
 
+    // If href is provided, render as a Link
+    if (href) {
+      return (
+        <Link href={href} className={classes} {...props}>
+          <motion.span whileTap={{ y: 1 }} className="block">
+            {children}
+          </motion.span>
+        </Link>
+      );
+    }
+
+    // Otherwise render as a button
     return (
       <motion.button
         ref={ref}

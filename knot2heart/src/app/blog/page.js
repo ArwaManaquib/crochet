@@ -94,22 +94,6 @@ export default function Blog() {
             </motion.div>
           ))}
         </div>
-
-        {/* Newsletter CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="text-center mt-16 bg-gradient-to-r from-warm-50/50 to-sage-50/50 rounded-lg p-8 border border-warm-100"
-        >
-          <h2 className="text-primary-400 text-2xl font-bold leading-tight mb-4">
-            Never Miss a Story
-          </h2>
-          <p className="text-primary-300 text-base font-normal leading-relaxed mb-6">
-            Subscribe to our newsletter to get the latest blog posts, tutorials,
-            and crochet inspiration delivered to your inbox.
-          </p>
-        </motion.div>
       </div>
     </div>
   );

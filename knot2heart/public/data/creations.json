@@ -1,0 +1,281 @@
+{
+  "creations": {
+    "crochet-duck": {
+      "id": "crochet-duck",
+      "title": "Adorable Crochet Duck",
+      "description": "Learn to create this charming yellow duck perfect for beginners. A delightful project that combines basic stitches with simple shaping techniques.",
+      "difficulty": "Beginner",
+      "estimatedTime": "3-4 hours",
+      "tutorialVideo": null,
+      "mainImage": "/duck.jpg",
+      "previewImages": ["/duck.jpg"],
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Gather Your Materials",
+          "description": "You'll need yellow yarn (worsted weight), a 4.5mm crochet hook, black embroidery thread for eyes, orange yarn for the beak, scissors, and a yarn needle for sewing.",
+          "image": "/duck.jpg"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Create the Magic Ring",
+          "description": "Start with a magic ring and work 6 single crochet stitches into the ring. Pull tight to close the ring. This will form the base of your duck's body.",
+          "image": "/single_crochet.jpg"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Build the Body",
+          "description": "Continue working in rounds, increasing every other stitch for the first few rounds to create the duck's round body shape. Work about 12 rounds total.",
+          "image": "/bouble_crochet.jpg"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Shape the Head",
+          "description": "Start decreasing stitches to form the duck's head. Stuff the body firmly with fiberfill as you work to maintain the shape.",
+          "image": "/chain_stitch.jpg"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Add the Beak and Eyes",
+          "description": "Using orange yarn, create a small triangle for the beak and sew it onto the face. Embroider black dots for the eyes using embroidery thread.",
+          "image": "/duck.jpg"
+        }
+      ],
+      "materials": [
+        "Yellow worsted weight yarn",
+        "4.5mm crochet hook",
+        "Black embroidery thread",
+        "Orange yarn",
+        "Fiberfill stuffing",
+        "Scissors",
+        "Yarn needle"
+      ],
+      "tags": ["beginner", "amigurumi", "duck", "toy", "quick-project"]
+    },
+    "among-us": {
+      "id": "among-us",
+      "title": "Among Us",
+      "description": "Create this adorable teddy bear using basic amigurumi techniques. Perfect for gifts or as a comforting companion.",
+      "difficulty": "Intermediate",
+      "estimatedTime": "5-6 hours",
+      "tutorialVideo": null,
+      "mainImage": "/among_us.png",
+      "previewImages": ["/among_us.png"],
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Prepare Materials",
+          "description": "Gather brown worsted weight yarn, 4mm crochet hook, safety eyes, black embroidery thread, fiberfill stuffing, scissors, and yarn needle.",
+          "image": "/among_us.png"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Start the Head",
+          "description": "Begin with a magic ring and work 6 single crochet stitches. Gradually increase to create a sphere shape for the bear's head.",
+          "image": "/single_crochet.jpg"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Create the Body",
+          "description": "Work the body in continuous rounds, creating an oval shape that's slightly larger than the head. Stuff firmly as you work.",
+          "image": "/bouble_crochet.jpg"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Make Arms and Legs",
+          "description": "Create four identical limbs using the same technique as the body but smaller. Stuff lightly and sew securely to the body.",
+          "image": "/chain_stitch.jpg"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Add Ears and Features",
+          "description": "Create small semi-circles for ears and attach to the head. Insert safety eyes and embroider a nose and mouth with black thread.",
+          "image": "/duck.jpg"
+        },
+        {
+          "stepNumber": 6,
+          "title": "Final Assembly",
+          "description": "Sew the head to the body securely. Add any final touches like a bow or scarf if desired. Your cuddly bear is complete!",
+          "image": "/among_us.png"
+        }
+      ],
+      "materials": [
+        "Brown worsted weight yarn",
+        "4mm crochet hook",
+        "Safety eyes (12mm)",
+        "Black embroidery thread",
+        "Fiberfill stuffing",
+        "Scissors",
+        "Yarn needle"
+      ],
+      "tags": ["intermediate", "amigurumi", "bear", "toy", "gift"]
+    },
+    "chain-stitch": {
+      "id": "chain-stitch",
+      "title": "Chain Stitch",
+      "description": "Learn the basics of crochet with this simple chain stitch tutorial. Perfect for beginners looking to start their crochet journey.",
+      "difficulty": "Beginner",
+      "estimatedTime": "15-20 hours",
+      "tutorialVideo": "/chain_stitch.mp4",
+      "mainImage": "/chain_stitch.jpg",
+      "previewImages": [
+        "/chain_stitch.jpg",
+        "/bouble_crochet.jpg",
+        "/single_crochet.jpg"
+      ],
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Choose Your Yarn",
+          "description": "Select a soft, worsted weight yarn in your favorite colors. You'll need approximately 1200-1500 yards for a throw-size blanket.",
+          "image": "/chain_stitch.jpg"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Create Foundation Chain",
+          "description": "Chain 150 stitches (or desired width). This will be the foundation for your blanket. Make sure your chain is not too tight.",
+          "image": "/single_crochet.jpg"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Work the Pattern",
+          "description": "Follow a simple stitch pattern like single crochet or double crochet. Work in rows, turning at the end of each row to create the blanket.",
+          "image": "/bouble_crochet.jpg"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Add Border",
+          "description": "Once you reach desired length, add a decorative border around the entire blanket using single crochet or your preferred border stitch.",
+          "image": "/duck.jpg"
+        }
+      ],
+      "materials": [
+        "Worsted weight yarn (1200-1500 yards)",
+        "5.5mm crochet hook",
+        "Scissors",
+        "Yarn needle"
+      ],
+      "tags": ["beginner", "blanket", "home-decor", "cozy", "long-project"]
+    },
+    "flower": {
+      "id": "flower",
+      "title": "Flower",
+      "description": "Learn how to crochet a flower with this simple tutorial. Perfect for beginners looking to start their crochet journey.",
+      "difficulty": "Intermediate",
+      "estimatedTime": "4-5 hours",
+      "tutorialVideo": null,
+      "mainImage": "/flower.jpg",
+      "previewImages": ["/flower.jpg"],
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Gather Colorful Yarns",
+          "description": "Choose various colors of yarn for different flower types - reds, pinks, yellows, purples, and green for stems and leaves.",
+          "image": "/flower.jpg"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Create Flower Petals",
+          "description": "Start with a magic ring and work petals using chain loops and single crochet. Each flower needs 5-6 petals for a full look.",
+          "image": "/chain_stitch.jpg"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Make Stems and Leaves",
+          "description": "Using green yarn, create long chains for stems and small leaf shapes. Attach leaves to stems at various points for realism.",
+          "image": "/single_crochet.jpg"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Assemble the Bouquet",
+          "description": "Sew flower heads to the top of stems. Arrange multiple flowers together and secure with a ribbon or yarn bow around the stems.",
+          "image": "/flower.jpg"
+        }
+      ],
+      "materials": [
+        "Various colored yarns",
+        "Green yarn for stems",
+        "3.5mm crochet hook",
+        "Scissors",
+        "Yarn needle",
+        "Ribbon for bow"
+      ],
+      "tags": ["intermediate", "flowers", "decoration", "gift", "colorful"]
+    },
+    "double-crochet": {
+      "id": "double-crochet",
+      "title": "Double Crochet Stitch",
+      "description": "Learn the basics of crochet with this simple double crochet stitch tutorial. Perfect for beginners looking to start their crochet journey.",
+      "difficulty": "Beginner",
+      "estimatedTime": "6-8 hours",
+      "tutorialVideo": "/double_crochet.mp4",
+      "mainImage": "/double_crochet.jpg",
+      "previewImages": ["/double_crochet.jpg"],
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Select Warm Yarn",
+          "description": "Choose a soft, warm yarn like wool or acrylic blend in your favorite winter color. You'll need about 400-500 yards.",
+          "image": "/rida_pins.jpg"
+        }
+      ],
+      "materials": [
+        "Worsted weight yarn (400-500 yards)",
+        "5mm crochet hook",
+        "Scissors",
+        "Yarn needle"
+      ],
+      "tags": ["beginner", "scarf", "winter", "wearable", "warm"]
+    },
+    "single-crochet": {
+      "id": "single-crochet",
+      "title": "Single Crochet Stitch",
+      "description": "Learn the basics of crochet with this simple single crochet stitch tutorial. Perfect for beginners looking to start their crochet journey.",
+      "difficulty": "Intermediate",
+      "estimatedTime": "2-3 hours",
+      "tutorialVideo": "/single_crochet.mp4",
+      "mainImage": "/single_crochet.jpg",
+      "previewImages": ["/single_crochet.jpg"],
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Choose Baby-Safe Yarn",
+          "description": "Select soft, washable yarn that's safe for babies. Cotton or bamboo yarns work well. You'll need about 100 yards total.",
+          "image": "/bouble_crochet.jpg"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Create the Sole",
+          "description": "Start with a foundation chain and work in an oval shape to create the sole of the bootie. This forms the base that the rest will be built upon.",
+          "image": "/single_crochet.jpg"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Build the Sides",
+          "description": "Work around the sole to create the sides of the bootie. Use single crochet stitches to build up the walls that will hold the baby's foot.",
+          "image": "/chain_stitch.jpg"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Shape the Toe",
+          "description": "Decrease stitches at the toe area to create the proper shape. This gives the bootie its characteristic rounded toe appearance.",
+          "image": "/duck.jpg"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Add Ankle Cuff",
+          "description": "Create a decorative cuff around the ankle opening. You can add a simple border or create a more elaborate pattern for extra style.",
+          "image": "/rida_pins.jpg"
+        }
+      ],
+      "materials": [
+        "Baby-safe yarn (100 yards)",
+        "3.5mm crochet hook",
+        "Scissors",
+        "Yarn needle",
+        "Optional: small buttons or ribbons"
+      ],
+      "tags": ["intermediate", "baby", "booties", "gift", "small-project"]
+    }
+  }
+}

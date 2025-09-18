@@ -62,17 +62,17 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="py-12"
+          className="py-8 sm:py-12"
         >
           {/* Main Footer Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-6 sm:mb-8">
             {/* Left side: Site Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center lg:items-start space-y-4"
+              className="flex flex-col items-center sm:items-start space-y-4 sm:col-span-2 lg:col-span-1"
             >
               <Link
                 href="/"
@@ -81,13 +81,13 @@ const Footer = () => {
                 <Logo />
                 <span className="text-xl font-bold">Knot2Heart</span>
               </Link>
-              <p className="text-primary-500 text-sm text-center lg:text-left max-w-xs">
+              <p className="text-primary-500 text-sm text-center sm:text-left max-w-xs">
                 Crafting stories, one stitch at a time. Join our cozy corner of
                 creativity.
               </p>
 
               {/* Social Media Icons */}
-              <div className="flex gap-4 pt-2">
+              <div className="flex gap-4 pt-2 justify-center sm:justify-start">
                 <SocialIcon href="#" label="Instagram">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center lg:items-start space-y-4"
+              className="flex flex-col items-center sm:items-start space-y-4"
             >
               <h3 className="text-primary-600 text-lg font-semibold">
                 Navigate
@@ -157,7 +157,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center lg:items-start space-y-4"
+              className="flex flex-col items-center sm:items-start space-y-4"
             >
               <h3 className="text-primary-600 text-lg font-semibold">
                 Support
@@ -182,7 +182,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex justify-center lg:justify-start"
+              className="flex justify-center sm:justify-start sm:col-span-2 lg:col-span-1 lg:justify-start"
             >
               <FooterNewsletter />
             </motion.div>
@@ -194,13 +194,13 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
-            className="pt-8 border-t border-primary-400/30"
+            className="pt-6 sm:pt-8 border-t border-primary-400/30"
           >
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-primary-500 text-sm font-normal">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-4">
+              <p className="text-primary-500 text-sm font-normal text-center sm:text-left">
                 © 2024 Knot2Heart. All rights reserved.
               </p>
-              <p className="text-primary-500 text-sm font-normal">
+              <p className="text-primary-500 text-sm font-normal text-center sm:text-right">
                 Made with 💛 for the crochet community
               </p>
             </div>

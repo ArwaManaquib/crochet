@@ -26,8 +26,8 @@ const FooterNewsletter = () => {
   };
 
   return (
-    <div className="space-y-3">
-      <div>
+    <div className="space-y-3 w-full max-w-sm">
+      <div className="text-center sm:text-left">
         <h3 className="text-primary-600 text-lg font-semibold leading-tight mb-2">
           Join our circle 💛
         </h3>

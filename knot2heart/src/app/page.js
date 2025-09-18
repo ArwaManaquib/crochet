@@ -4,48 +4,46 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 import { GRADIENTS } from "@/lib/colors";
 
 export default function Home() {
+  const [featuredCreations, setFeaturedCreations] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCreations = async () => {
+      try {
+        const response = await fetch("/data/creations.json");
+        const data = await response.json();
+        // Get first 3 creations for featured section
+        const creationsArray = Object.values(data.creations);
+        setFeaturedCreations(
+          creationsArray
+            .filter((creation) => creation.tutorialVideo)
+            .slice(0, 3)
+        );
+      } catch (error) {
+        console.error("Failed to fetch creations:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCreations();
+  }, []);
   const featuredCategories = [
     {
       title: "Gallery & Tutorials",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuB-5-WKH_OkI7f4o1lznoIhWF_6-Cm0JSRQwNZZGkxUeo0JpeUHDakhrKb-O5vh5D3vCb8edhRKvht-fkrESWdBH_bfKQB1Ypc5j_YLbI9evfT-gMqM5PKXeAg_Ki9qzKCxv24zSGVk-B-EUrkg03w2eHb89Api0rV7qF6gqcJJVGtCjwsOxa1yv6zYJXOhjNw5xXbwC9B641DIdYv-9f2rgADD9mVpUlJ9ZcQ4Y8gwrJJ1--wesW5nN2YmMAkLTLs1ZBmhdtUs03Gy",
+      image: "/duck.jpg",
       href: "/gallery",
     },
     {
       title: "Blogs & Stories",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCPWFb_bk-_UGFH4gnruZgjNcbH9K3COeFm0lnowXgjMosngY-mo_j0J5AqV8XUFdQT9svDUKRr3Y1IEWUfFj-TVxRzFsMV5-z_NKPkyqHLC8MnLYXZZiIDVMdU1UGjTkBoJ0RBrb2ilOiYOhKixZOkNcX4W9ye7qIfBXBDFqgBm3SU0Cy4bMG996Nva8bNQG_Qm08EqUtvoY2S8ZpTbU3nnhAejyxOLbqLczysrgBf6AMSEGnfOqjWWkKwF06VZWcPjArd3N8odazR",
+      image: "/chain_stitch.jpg",
       href: "/blog",
-    },
-  ];
-
-  const highlightedCreations = [
-    {
-      title: "Beginner's Guide to Crochet",
-      description:
-        "Learn the basics of crochet with our step-by-step tutorial.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCXxUfJG81zIhWXAbQx5koK41cDriL440odFMuF7u2Sq-6bkQ22gas4LVnXgv0yqfcfnLBruD5tmpwX4vivzh197Qi09DVVlF_1XuWDkdaI2Krci_T0judT3sMuQlNsAq0cnoa0XPXYYowJfyKBacYnDm464AqGCNdWXJQvRS31zU8vWgwNs2TVFcLFEmpYIOmawTW1UN0vrygfB89VzjnSLLixAD_OLolG1XYsBOzVRl5aNGZOR4vydxvb8yvPw5aQRx9e9cxx2U9W",
-      href: "/tutorial",
-    },
-    {
-      title: "The Story Behind Our Latest Collection",
-      description:
-        "Discover the inspiration and process behind our latest crochet collection.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuB2WEsPvYk1ZMFWt3UCStyctLT6yS1lDJ_de6PJPiJYyD3uf6Rl0GFz5GyevqlVAcG46QZPMxK4EQLKfWXzCe0j_Pi-lob7GX21EQKkKTCRhvaZD_BQtryVgjQprgu9MgFIttqTbnXWRwztspCSeVufdQzyb9cUvV8ZXJzFWOL8BQPFyROn846k_JzQWM6KsGVNYLkRj0Ux-EMBmYfGLekdkUMMGvmLpA-ty6-an63T1uvTsMDhAG3NfgLHkGNkeF5lyWqW23O7SH9g",
-      href: "/blog",
-    },
-    {
-      title: "Project Spotlight: Cozy Winter Scarf",
-      description: "Get inspired by our community's cozy winter scarf project.",
-      image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuD0j6_sgMsONKKfx0A1vOi9YpT77-XvkesIbeQVfDWq9e4cvaraxK2jU4UZXlKfjCsnSWzrO-jAh5TJ28e37wVfkWAS3y_NKVZ_xzaiQ7mKez3s7t2AMUEJE5dDevcIcHkOLzx2RTynQK5-D6PVbd_QTyAQMlNfkdJhZNAz-h9LlaO6ejXLU-ScxvrOT4VzFsB8bnOb4s-zikNZI2BLRyxrxIB8f1ghbR3qV2vgs6wRjOoEu7auLuObeY5HLPWCvyYI-MsnC6Ev2-dy",
-      href: "/gallery",
     },
   ];
 
@@ -55,7 +53,7 @@ export default function Home() {
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdQ3rfkEZnyEmm7AJj4RFGWZjN3qQYcxQyOjJuyDZS2h2DqCSH_pgDOw73YuXJC8RezVt5F-Z_vTB-vR-1coZBhJqt4OdRjKe96I_ByT5naBIQyMZmkngsYyk1W3CjEWADWqRDWeIp4lAzxtKg1b-oo0KX21K_mTx6dBBpiFXtuZuubjPlTZbjTK9rp6Sw0C0oEKy-fiWf_hMSI5QcCJRhL9mdx-WZXFc4UpURtuQj2ZJOZ8AIjJeDAYBv4Q3yE0NlDrWjKRWVYxac"
+            src="/flower.jpg"
             alt="Crochet background"
             fill
             className="object-cover"
@@ -85,7 +83,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <Button size="lg" className="text-lg px-8 py-4">
+              <Button href="/gallery" size="lg" className="text-lg px-8 py-4">
                 Explore Creations
               </Button>
             </motion.div>
@@ -129,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Highlighted Creations */}
+      {/* Featured Creations */}
       <section
         className={`py-16 px-4 sm:px-6 lg:px-8 ${GRADIENTS.sections.highlighted}`}
       >
@@ -141,28 +139,76 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-primary-400 text-3xl font-bold leading-tight tracking-tight mb-8 px-4"
           >
-            Highlighted Creations
+            Featured Creations
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-            {highlightedCreations.map((creation, index) => (
-              <motion.div
-                key={creation.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <Card
-                  title={creation.title}
-                  description={creation.description}
-                  image={creation.image}
-                  href={creation.href}
-                  imageAspect="square"
-                />
-              </motion.div>
-            ))}
-          </div>
+          {loading ? (
+            <div className="text-center py-8">
+              <div className="text-primary-400 text-lg">
+                Loading creations...
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+              {featuredCreations.map((creation, index) => (
+                <motion.div
+                  key={creation.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group"
+                >
+                  {/* Image */}
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={creation.mainImage}
+                      alt={creation.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-primary-400 text-xl font-semibold mb-2">
+                      {creation.title}
+                    </h3>
+                    <p className="text-primary-300 text-sm mb-4 line-clamp-2">
+                      {creation.description}
+                    </p>
+
+                    {/* Difficulty and Time */}
+                    <div className="flex gap-2 mb-4">
+                      <span className="bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-xs font-medium">
+                        {creation.difficulty}
+                      </span>
+                      <span className="bg-sage-100 text-primary-600 px-3 py-1 rounded-full text-xs font-medium">
+                        {creation.estimatedTime}
+                      </span>
+                    </div>
+
+                    {/* Conditional Button */}
+                    {creation.tutorialVideo ? (
+                      <Link
+                        href={`/tutorial/${creation.id}`}
+                        className="w-full bg-gradient-to-r from-primary-300 to-lavender-300 text-white px-4 py-2 rounded-lg font-medium hover:from-primary-400 hover:to-lavender-400 transition-all duration-300 text-center block"
+                      >
+                        Let&apos;s Make
+                      </Link>
+                    ) : (
+                      <button
+                        disabled
+                        className="w-full bg-gray-200 text-gray-500 px-4 py-2 rounded-lg font-medium cursor-not-allowed text-center"
+                      >
+                        Coming Soon
+                      </button>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -190,23 +236,24 @@ export default function Home() {
           >
             <div className="flex-1 space-y-4">
               <h3 className="text-primary-400 text-xl font-bold leading-tight">
-                Meet Sarah, the Heart Behind Knot2Heart
+                Meet Arwa, the Heart Behind Knot2Heart
               </h3>
               <p className="text-primary-300 text-base font-normal leading-relaxed">
-                Sarah&apos;s passion for crochet began as a hobby and blossomed
-                into a creative journey she loves to share. With a focus on
-                cozy, modern designs, Sarah aims to inspire others to pick up a
-                hook and create something beautiful.
+                Arwa&apos;s journey with crochet began during the COVID-19
+                lockdown, transforming from a simple hobby into a meaningful
+                pursuit of creativity and community building. Through her
+                dedication to learning and teaching, she aims to share the joy
+                of crochet with others.
               </p>
-              <Button variant="secondary" className="mt-4">
-                Know More
+              <Button href="/journey" variant="secondary" className="mt-4">
+                Follow My Journey
               </Button>
             </div>
 
             <div className="flex-1 max-w-md">
               <div className="relative aspect-video rounded-lg overflow-hidden">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO1IjNrZt-Wjt2zG6CU-tMyXPANvUPW5uYOpuxuuS21VM_V56wNc3MhuFxgIDlYGcsWFq4zmTKgLRYk86tSj_UZVgxrKw-nlUfx0C8kUSQ9BYB8PQAgVeODR402mH0tOsYq4PGY7qOD1_Z7mJZElkGu5LSPhe4Lq14CvlTsJc1t18QKPTlqzOwIAqa7nor5CnBStEx3_EmCh63SlNJ86eGqJWPPcQiZCwNZBNBonQzLOeT4v2jzoXUdJexaFsjyE02uhcUQJag_0cE"
+                  src="/rida_pins.jpg"
                   alt="Sarah working on crochet"
                   fill
                   className="object-cover"
